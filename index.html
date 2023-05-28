@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Note-Taking App</title>
+    <script src="https://kit.fontawesome.com/0cae8a18a8.js" crossorigin="anonymous"></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-info">
+                <i class="header-icon fa-solid fa-note-sticky"></i>
+                <p class="title">My Notes</p>
+            </div>
+            <div>
+                <button id="open-form" class="button-primary add-button">
+                    New Note
+                    <i class="fa-solid fa-plus"></i>
+                </button>
+            </div>
+        </div>
+        <div id="modal-add" class="modal-wrap">
+            <div class="wrapper-form">
+                <form id="form-note">
+                    <input type="hidden" id="idNote" name="id">
+                    <div class="input-wrapper">
+                        <input id="input-title" name="title" type="text" placeholder="Title...">
+                    </div>
+                    <div class="input-wrapper">
+                        <textarea name="description" placeholder="Add a description" id="input-description" cols="30" rows="10"></textarea>
+                    </div>
+                    <div class="input-wrapper">
+                        <span>Select a color</span>
+                        <select name="color" id="color">
+                            <option value="skyblue">skyblue</option>
+                            <option value="papayawhip">papayawhip</option>
+                            <option value="salmon">salmon</option>
+                            <option value="deeppink">deeppink</option>
+                            <option value="yellowgreen">yellowgreen</option>
+                        </select> 
+                    </div>
+                    <div class="actions">
+                        <button id="new-note" class="button-primary add-button">
+                            Save
+                        </button>
+                        <button id="close-form" class="button-secondary add-button">
+                            Cancel
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="notes" class="wrapper-notes"></div>
+    </div>
+</body>
+<script src="js/index.js"></script>
+</html>
